@@ -34,7 +34,12 @@ public class Program {
 			
 		qtdMenores = cont * 100;
 		qtdMenores /= n; 
-		System.out.printf("Altura Media:%0.2f"+mediaAltura);
-		System.out.printf("Pessoas com menos de 16 anos: %0.2f%%",qtdMenores);
+		System.out.printf("Altura Media:%.2f\n",mediaAltura);
+		System.out.printf("Pessoas com menos de 16 anos: %.2f%%\n",qtdMenores);
+		for(int i=0;i<n;i++) {
+			if(pessoa[i].idade < 16) {
+				System.out.println(pessoa[i].nome);
+			}
+		}
 	}
 }
