@@ -20,6 +20,7 @@ public class Program {
 		Alunos[] aluno = new Alunos[n];
 		sc.nextLine();
 		for(int i=0;i<n;i++) {
+			System.out.printf("\nRent #%d:\n", i+1);
 			System.out.print("Nome: ");
 			String nome = sc.nextLine();
 			System.out.print("Email: ");
@@ -28,11 +29,14 @@ public class Program {
 			System.out.print("Numero do quarto: ");
 			int numero = sc.nextInt();
 			quarto[numero].setAluno(aluno[i]);
+			sc.nextLine();
+			
 		}
-		
+		sc.close();
+		System.out.println("\nBusy rooms:");
 		for(int i=0;i<10;i++) {
 			if(quarto[i].getAluno() != null) {
-				System.out.print(i+": " +quarto[i].getAluno().getNome()+","+quarto[i].getAluno().getEmail());
+				System.out.println(i+": " +quarto[i].getAluno().getNome()+", "+quarto[i].getAluno().getEmail());
 			}
 		}
 	}

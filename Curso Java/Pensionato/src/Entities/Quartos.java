@@ -1,5 +1,4 @@
 package Entities;
-import Entities.Alunos;
 
 public class Quartos {
 	int numero;
