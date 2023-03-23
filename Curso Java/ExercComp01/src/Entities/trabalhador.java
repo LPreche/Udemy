@@ -5,11 +5,12 @@ import Entities.Enum.NivelTrabalhador;
 public class Trabalhador {
 	private String nome;
 	private NivelTrabalhador nivel;
-	private float salarioBase;
+	private Double salarioBase;
 	private Departamento departamento;
 	//Contratos = new Arraylist[];	
+
 	//Construtores
-	public Trabalhador(String nome, NivelTrabalhador nivel, float salarioBase, Departamento departamento) {
+	public Trabalhador(String nome, NivelTrabalhador nivel, Double salarioBase, Departamento departamento) {
 		this.nome = nome;
 		this.nivel = nivel;
 		this.salarioBase = salarioBase;
@@ -32,10 +33,10 @@ public class Trabalhador {
 		this.nivel = nivel;
 	}
 
-	public float getSalarioBase() {
+	public Double getSalarioBase() {
 		return salarioBase;
 	}
-	public void setSalarioBase(float salarioBase) {
+	public void setSalarioBase(Double salarioBase) {
 		this.salarioBase = salarioBase;
 	}
 

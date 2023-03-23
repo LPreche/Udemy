@@ -11,9 +11,6 @@ public class Program {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int N;
-
-		N = sc.nextInt();
-
 		Departamento departamento = new Departamento();
 		
 		System.out.print("Insira o nome do departamento: ");
@@ -21,12 +18,24 @@ public class Program {
 		System.out.println("Insira os dados do trabalhado:");
 		System.out.print("Nome: ");
 		String Tnome = sc.nextLine();
+		String Tnivel;
+		NivelTrabalhador nivel = null;
 		do{
 			System.out.print("Nivel: ");
-			String Tnivel = sc.nextLine();
-			Tnivel.compareTo(NivelTrabalhador.JUNIOR.toString());
-		}
-		Trabalhador trabalhador = new Trabalhador(Tnome,Tnivel,TsalarioB,departamento);
+			Tnivel = sc.nextLine();	
+			if(Tnivel.equals(NivelTrabalhador.JUNIOR.toString())){
+				nivel = NivelTrabalhador.JUNIOR;
+			}else if(Tnivel.equals(NivelTrabalhador.PLENO.toString())){
+				nivel = NivelTrabalhador.PLENO;
+			}else if(Tnivel.equals(NivelTrabalhador.JUNIOR.toString())){
+				nivel = NivelTrabalhador.SENIOR;
+			}
+		}while(!(Tnivel.equals(NivelTrabalhador.JUNIOR.toString())) && !(Tnivel.equals(NivelTrabalhador.PLENO.toString())) && !(Tnivel.equals(NivelTrabalhador.SENIOR.toString())));
+		System.out.println("Salario Base: ");
+		double TsalarioB = sc.nextDouble();
+		System.out.print("Quantidade de contratos: ");
+		N = sc.nextInt();
+		Trabalhador trabalhador = new Trabalhador(Tnome,nivel,TsalarioB,departamento);
 
 	}
 
