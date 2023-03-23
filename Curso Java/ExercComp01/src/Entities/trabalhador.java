@@ -1,5 +1,8 @@
 package Entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import Entities.Enum.NivelTrabalhador;
 
 public class Trabalhador {
@@ -7,7 +10,7 @@ public class Trabalhador {
 	private NivelTrabalhador nivel;
 	private Double salarioBase;
 	private Departamento departamento;
-	//Contratos = new Arraylist[];	
+	private List <Contratos> List = new ArrayList<>();
 
 	//Construtores
 	public Trabalhador(String nome, NivelTrabalhador nivel, Double salarioBase, Departamento departamento) {
@@ -51,14 +54,14 @@ public class Trabalhador {
 
 	//Metodos
 	public void addContrato(Contratos contrato){
-	
+		this.List.add(contrato);
 	}
 	
 	public void removerContrato(Contratos contrato){
-	
+		
 	}
 	
-	public double salario(int ano,int mes){
+	public double ganhos(int ano,int mes){
 		return 1;
 	}
 }
