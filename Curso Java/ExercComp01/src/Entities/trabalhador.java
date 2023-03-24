@@ -1,6 +1,8 @@
 package Entities;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import Entities.Enum.NivelTrabalhador;
@@ -10,7 +12,7 @@ public class Trabalhador {
 	private NivelTrabalhador nivel;
 	private Double salarioBase;
 	private Departamento departamento;
-	private List <Contratos> List = new ArrayList<>();
+	private List <Contratos> list = new ArrayList<>();
 
 	//Construtores
 	public Trabalhador(String nome, NivelTrabalhador nivel, Double salarioBase, Departamento departamento) {
@@ -54,15 +56,28 @@ public class Trabalhador {
 
 	//Metodos
 	public void addContrato(Contratos contrato){
-		this.List.add(contrato);
+		this.list.add(contrato);
 	}
 	
 	public void removerContrato(Contratos contrato){
-		
+		this.list.remove(contrato);
 	}
-	
+
 	public double ganhos(int ano,int mes){
-		return 1;
+		double valorTotal = 0;
+		List<Contratos> cont = this.list;
+		Calendar cal = Calendar.getInstance();
+			for(Contratos C : cont){
+				Date TempData = C.getData();
+				cal.setTime(TempData);
+				int m = cal.get(Calendar.MONTH)+1;
+				int a = cal.get(Calendar.YEAR);
+				if(m == mes && a == ano){
+					valorTotal += C.valorTotal();
+				}
+			}
+		valorTotal += this.salarioBase;
+		return valorTotal;
 	}
 }
 

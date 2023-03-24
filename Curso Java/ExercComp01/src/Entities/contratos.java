@@ -13,9 +13,17 @@ public class Contratos{
         this.valorHora = valorHora;
         this.horas = horas;
     }
+    
+    //getters e setters
+    public Date getData() {
+        return data;
+    }
+
     //Métodos
     public double valorTotal(){
         return this.valorHora * horas;
     }
+
+  
 }  
 

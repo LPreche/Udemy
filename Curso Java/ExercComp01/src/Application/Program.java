@@ -3,7 +3,9 @@ package Application;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 import Entities.Contratos;
@@ -43,7 +45,7 @@ public class Program {
 		Trabalhador trabalhador = new Trabalhador(Tnome,nivel,TsalarioB,departamento);
 		for(int i=0;i<N;i++){
 			System.out.println("Informe os dados do contrato #"+(i+1));
-			System.out.print("Data (DD/MM/YYYY: ");
+			System.out.print("Data (DD/MM/YYYY): ");
 			String d = sc.next();
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			Date data = new Date();
@@ -61,9 +63,24 @@ public class Program {
 			trabalhador.addContrato(contrato);
 		}
 
-			System.out.println("Nome: "+trabalhador.getNome());
-			System.out.println("Departamento: "+trabalhador.getDepartamento().nome);
-
+		Calendar cal = Calendar.getInstance();
+		System.out.print("Informe mes e ano (MM/YYYY) para visualizar os ganhos:");
+		String dat = sc.next();
+		SimpleDateFormat sdf2 = new SimpleDateFormat("MM/yyyy");
+		Date Idata = new Date();
+		try {
+			Idata = sdf2.parse(dat);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		cal.setTime(Idata);
+		int mes = cal.get(Calendar.MONTH)+1;
+		int ano = cal.get(Calendar.YEAR);
+		double ganhos = trabalhador.ganhos(ano, mes);
+		System.out.println("Nome: "+trabalhador.getNome());
+		System.out.println("Departamento: "+trabalhador.getDepartamento().nome);
+		System.out.print("Ganhos em "+mes+"/"+ano+" : "+ganhos+"\n");
 	}
 
 }
