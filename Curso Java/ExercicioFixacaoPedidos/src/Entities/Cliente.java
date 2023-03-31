@@ -7,9 +7,9 @@ public class Cliente {
     private String email;
     private Date dataNasc; 
 
-    public Cliente(String nome,String email,Date dataN){
-        this.nome = nome;
+    public Cliente(String nome, String email, Date dtnasc){
+        this.dataNasc = dtnasc;
         this.email = email;
-        this.dataNasc = dataN;
+        this.nome = nome;
     }
 }

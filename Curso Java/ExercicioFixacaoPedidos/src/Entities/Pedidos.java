@@ -14,6 +14,9 @@ public class Pedidos {
     private Double total;
 
 
+    public Pedidos(){
+
+    }
     public Pedidos(Date instant, OrderStatus status, Cliente cliente){
         this.instante = instant;
         this.status = status;

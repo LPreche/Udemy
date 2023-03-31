@@ -9,4 +9,13 @@ public class Produto {
         this.preco = preco;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    
 }
