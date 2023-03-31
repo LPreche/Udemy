@@ -12,10 +12,8 @@ public ItemPedido(Produto produto, int quantidade, Double preco) {
         this.preco = preco;
     }
 
-
 public Double subTotal(){
-    double subtotal = this.quantidade * this.preco;
-    return subtotal;
+    return this.quantidade * this.preco;
 }
 
 }

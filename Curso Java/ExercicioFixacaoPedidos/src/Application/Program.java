@@ -28,8 +28,6 @@ public class Program {
             e.printStackTrace();
         }
         System.out.println("Enter Order data:");
-        System.out.print("How many items to this order?" );
-        int N = sc.nextInt();
         OrderStatus status = null;
         String Tstatus;
         do{
@@ -46,6 +44,14 @@ public class Program {
             }
         }while(!(Tstatus.equals(OrderStatus.PENDENTE.toString()))&& !(Tstatus.equals(OrderStatus.PROCESSANDO.toString()))&& !(Tstatus.equals(OrderStatus.ENVIADO.toString()))&& !(Tstatus.equals(OrderStatus.ENTREGUE.toString())));
         
+        System.out.print("How many items to this order?" );
+        int N = sc.nextInt();
 
+        for(int i=0;i<N;i++){
+            System.out.print("Product Name: ");
+            String Pname = sc.nextLine();
+            System.out.print("Product Price: ");
+            Double Pprice = sc.nextDouble();
+        }
     }
 }
