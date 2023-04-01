@@ -22,6 +22,23 @@ public class Pedidos {
         this.status = status;
         this.cliente = cliente;
     }
+
+    
+    public Date getInstante() {
+        return instante;
+    }
+    public OrderStatus getStatus() {
+        return status;
+    }
+    public List<ItemPedido> getList() {
+        return list;
+    }
+    public Cliente getCliente() {
+        return cliente;
+    }
+ 
+
+
     public void addItem(ItemPedido item){
         this.list.add(item);
     }
@@ -34,6 +51,7 @@ public class Pedidos {
         for (ItemPedido I : list){
             total += I.subTotal();
         }
+        this.total = total;
         return total;
     }
 }

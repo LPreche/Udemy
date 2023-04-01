@@ -1,6 +1,7 @@
 package Entities;
 
-import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Cliente {
     private String nome;
@@ -12,4 +13,19 @@ public class Cliente {
         this.email = email;
         this.nome = nome;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getDataNasc() {
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        return format.format(dataNasc);
+    }
+
+    
 }
