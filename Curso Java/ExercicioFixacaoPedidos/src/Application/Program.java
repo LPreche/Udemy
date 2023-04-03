@@ -15,7 +15,7 @@ import Entities.Enum.OrderStatus;
 
 public class Program {
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws ParseException{
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite os dados do Cliente: ");
@@ -30,6 +30,7 @@ public class Program {
         Date dataNascimento = null;
         try {
             dataNascimento = sdf.parse(data);
+            System.out.println(sdf.format(dataNascimento));
         } catch (ParseException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -55,17 +56,14 @@ public class Program {
             }
         }while(!(Tstatus.equals(OrderStatus.PENDENTE.toString()))&& !(Tstatus.equals(OrderStatus.PROCESSANDO.toString()))&& !(Tstatus.equals(OrderStatus.ENVIADO.toString()))&& !(Tstatus.equals(OrderStatus.ENTREGUE.toString())));
         
-        System.out.print("Quantos produtos vai ter no pedido?" );
+        System.out.print("Quantos produtos vai ter no pedido? " );
         int N = sc.nextInt();
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date instante = new Date(); 
         String dataHoraAtual = sdf1.format(instante);
-        try{
-            instante = sdf1.parse(dataHoraAtual);
-        }catch(ParseException e){
-            e.printStackTrace();
-        }
+        instante = sdf1.parse(dataHoraAtual);
+
         Pedidos pedido = new Pedidos(instante,status,cliente);
 
         
@@ -89,17 +87,12 @@ public class Program {
             
         System.out.println();
         
-        System.out.println("Data e Hora do pedido: "+pedido.getInstante());
+        System.out.println("Data e Hora do pedido: "+sdf1.format(pedido.getInstante()));
         System.out.println("Status do pedido: "+pedido.getStatus());
 
-        Date nasc = null;
-        try {
-            nasc = sdf.parse(pedido.getCliente().getDataNasc());
-        } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } 
-        System.out.println("Cliente: "+pedido.getCliente().getNome()+"("+nasc+") - "+pedido.getCliente().getEmail());
+        Date nasc = pedido.getCliente().getDataNasc();
+    
+        System.out.println("Cliente: "+pedido.getCliente().getNome()+"("+sdf.format(nasc)+") - "+pedido.getCliente().getEmail());
         System.out.println("Itens do pedido:");
 
         List<ItemPedido> listaFinal = pedido.getList();

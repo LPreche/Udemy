@@ -22,9 +22,8 @@ public class Cliente {
         return email;
     }
 
-    public String getDataNasc() {
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        return format.format(dataNasc);
+    public Date getDataNasc() {
+        return dataNasc;
     }
 
     
