@@ -1,5 +1,6 @@
 package Application;
 
+import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -37,10 +38,12 @@ public class Program {
                 Produto p = new ProdutoImportado(nome, preco, taxa);
                 produtos.add(p);
             }else if(c == 'u'){
+                sc.nextLine();
                 System.out.print("Data de Fabricacao (dd/mm/yyyy): ");
                 String dataF = sc.nextLine();
                 SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
-                Produto p = new ProdutoUsado(nome, preco,s.parse(dataF));
+                Date d = s.parse(dataF);
+                Produto p = new ProdutoUsado(nome, preco,d);
                 produtos.add(p);
             }else{
                 Produto p = new Produto(nome, preco);
@@ -49,14 +52,7 @@ public class Program {
         }
 
         for(Produto P : produtos){
-        if(c == 'i'){
             System.out.println(P.valorEtiqueta());
-        }else if(c == 'u'){
-            System.out.println(P.valorEtiqueta());
-        }else{
-            System.out.println(P.valorEtiqueta());
-        }
-
         }
     }
 
