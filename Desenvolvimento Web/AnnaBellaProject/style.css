@@ -1,0 +1,41 @@
+body{
+    background-color: #DEDCC7;
+}
+
+div{
+    width: 900px;
+    max-width: 900px;
+}
+
+a{
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color:#5D6368;
+}
+
+.menu{
+    padding-top: 12px;
+    text-align: left;
+    height: 60px;
+    background-color: #D4D3BE;
+}
+
+#sobre{
+    padding-top: 1px;
+    padding-bottom: 5px;
+    background-color: white;
+    text-align: top;
+    height: auto;
+}
+#sobre h2{
+    font-weight: 900;
+    color:#A6A496;
+}
+#sobre div{
+    padding-left: 10px;
+}
+.imgCabecalho{
+    height: 388px;
+    width: 900px;
+}
