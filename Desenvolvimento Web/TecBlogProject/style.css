@@ -1,0 +1,58 @@
+body{
+    height: 100vh;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    background-color: #e6e6e6;
+}
+#cabecalho{
+    background-color: #f7b600;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 100vw;
+    height: 150px;
+}
+div#logo{
+    min-width: 110px;
+    width: 35vw;
+    max-width: 150px;
+    margin: 20px auto;
+    justify-content: center;
+
+}
+#logo h1{
+    font-size: 2.5em;
+    
+
+} 
+#logo span#tec{
+    color: #4e4e4e;
+}
+#logo span#blog{
+    color: white;
+}
+
+#menu{
+    height: auto;
+    min-width: 400px;
+    width: 68vw;
+    max-width: 500px;
+    margin: 20px auto;
+    justify-content: center;
+    font-size: 16px;
+}
+#menu a{
+    padding:5px;
+    margin:6px;
+    color: white;
+    font-weight: 900;
+}
+#menu a:hover{
+    font-weight: 900;
+    background-color: white;
+    color:#f7b600;
+}
+#conteudo{
+    margin-top: 180px;
+    background-color: white;
+    width: 99w;
+}
