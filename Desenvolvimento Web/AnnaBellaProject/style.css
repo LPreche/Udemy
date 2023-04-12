@@ -13,7 +13,14 @@ a{
     text-decoration: none;
     color:#5D6368;
 }
+a:hover{
+    color:#fcfcec;
+}
 
+#cabecalho img{
+    height: 388px;
+    width: 900px;
+}
 .menu{
     padding-top: 12px;
     text-align: left;
@@ -21,21 +28,30 @@ a{
     background-color: #D4D3BE;
 }
 
-#sobre{
+#central{
     padding-top: 1px;
     padding-bottom: 5px;
-    background-color: white;
+    background-color: #fcfcec;
     text-align: top;
     height: auto;
 }
-#sobre h2{
+#central h2{
+    padding-left: 8px;
     font-weight: 900;
     color:#A6A496;
 }
-#sobre div{
-    padding-left: 10px;
+#central div{
+    padding-left: 8px;
 }
-.imgCabecalho{
-    height: 388px;
-    width: 900px;
+#central img{
+    border-style: outset;
+    border-width: 10px;
+    border-color: #d3d5be;
+}
+#central p{
+    max-width: 100%;
+}
+div.texto{
+    text-align: justify;
+    width: 850px;
 }
