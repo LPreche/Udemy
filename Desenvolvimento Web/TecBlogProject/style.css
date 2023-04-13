@@ -2,6 +2,7 @@ body{
     height: 100vh;
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
     background-color: #e6e6e6;
+    
 }
 #cabecalho{
     background-color: #f7b600;
@@ -11,18 +12,16 @@ body{
     width: 100vw;
     height: 150px;
 }
+
 div#logo{
     min-width: 110px;
     width: 35vw;
     max-width: 150px;
     margin: 20px auto;
     justify-content: center;
-
 }
 #logo h1{
     font-size: 2.5em;
-    
-
 } 
 #logo span#tec{
     color: #4e4e4e;
@@ -52,7 +51,22 @@ div#logo{
     color:#f7b600;
 }
 #conteudo{
+    position: relative;
+    padding: 15px;
+    min-width: 900px;
     margin-top: 180px;
+    margin-left: 15vw;
+    background-color: grey;
+    width: 55vw;
+    height: auto;
+}
+#conteudo div{
+    max-width: 620px;
     background-color: white;
-    width: 99w;
+}
+#conteudo #lateral{
+    top:1px;
+    position: relative;
+    width: 200px;
+    float:right;
 }
