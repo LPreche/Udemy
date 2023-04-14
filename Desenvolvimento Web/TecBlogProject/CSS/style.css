@@ -1,81 +1,107 @@
 body{
-    height: 100vh;
+    font-size: 1em;
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
     background-color: #e6e6e6;
     
 }
 #cabecalho{
     background-color: #f7b600;
-    position: relative;
-    top: -27px;
-    left: -8px;
-    width: 100vw;
-    height: 150px;
+    padding: 15px;
+    text-align: center;
 }
 
-div#logo{
-    min-width: 110px;
-    width: 35vw;
-    max-width: 150px;
-    margin: 25px auto;
-    justify-content: center;
+#menu, #logo{
+    padding: 10px;
 }
-#logo h1{
-    font-size: 2.5em;
-} 
-#logo span#tec{
+#tec{
     color: #4e4e4e;
 }
-#logo span#blog{
+#blog{
     color: white;
-}
-
-#menu{
-    height: auto;
-    min-width: 400px;
-    width: 70vw;
-    max-width: 550px;
-    margin: 20px auto;
-    justify-content: center;
-    font-size: 16px;
-}
-#menu a{
-    padding:5px;
-    margin:6px;
-    color: white;
-    font-weight: 900;
-}
-#menu a:hover{
-    font-weight: 900;
-    background-color: white;
-    color:#f7b600;
 }
 #central{
-    float:left;
-    position: relative;
-    background-color: grey;
-    left: 25vw;
-    min-width: 750px;
-    width: 40vw;
-    max-width: 70vw;
+    width: 920px;
+    margin: 0 auto;
+    padding: 15px;
 }
-#central div{
-    margin-top: 20px;
-    border: #f7b600;
-    border-style:outset ;
-    background-color: azure;
-    width: 500px;
+#postagens{
+    float:left;
+    width: 660px;
+}
+.postagem{
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.dataPost{
+    font: 0.8em;
+    border-bottom: 1px solid #f4f4f4;
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
 }
 #lateral{
-    float:left;
-    margin:12px 10px;
+    float:right;
+    width: 240px;
 }
-#lateral img{
-    width: 29vw;
-    padding: 20px;
+#rodape{
+    padding: 15px;
+    background-color: #CCC;
+    text-align: center;
+    clear:both;
+
 }
-#lateral p{
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: justify;
+.conteudoLateral{
+    background-color:white;
+    padding: 10px;
+    margin-bottom: 20px;
 }
+.textoLateral{
+    
+}
+.postagemLateral{
+    font-size: 0.8em;
+    padding: 5px;
+}
+/*Formatação de links*/
+#cabecalho a:visited, #cabecalho a:link{
+    color: #fff;
+}
+#cabecalho a:hover{
+    color: #f7b600;
+    background-color: #FFF;
+}
+
+a:visited, a:hover{
+    color: #f7b600;
+    text-decoration: underline;
+}
+/*Formatações*/
+h1{
+    font-size: 2.5em;
+}
+h2{
+    color: #f7b600;
+}
+h3{
+    background-color: #CCC;
+    padding: 5px;
+    font-weight: bold
+}
+#cabecalho a{
+    text-decoration: none;
+    color: #FFF;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
